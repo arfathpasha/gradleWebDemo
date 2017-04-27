@@ -24,8 +24,5 @@ branches:
     - staging
     - develop
 
-script:
-    - ./gradlew test
-
 after_success:
-    - echo test success!
+    - ./gradlew jacocoTestReport coveralls
